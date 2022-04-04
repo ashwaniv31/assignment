@@ -1,0 +1,27 @@
+{% extends 'template.html' %}
+
+{%block body%}
+
+<!--search UI-->
+<h1 style="text-align:center;">Search a user</h1>
+<form action="search" method="post" style="width:700px; margin:3% auto; border:1px solid black;padding:10px;">
+        <div class="input-group input-group-sm mb-3">
+           <span class="input-group-text" >First Name:</span>
+           <input type="text" class="form-control" name="first_name" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+         </div>
+
+        <div class="input-group input-group-sm mb-3">
+           <span class="input-group-text">Last Name:</span>
+           <input type="text" class="form-control" name="last_name" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+         </div>
+
+
+         <div class="input-group input-group-sm mb-3">
+           <span class="input-group-text">Mobile No:</span>
+           <input type="number" class="form-control" name="mobile_no" maxlength="12" minlength="10" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+         </div>
+
+        <input type="submit" value="search" >
+    </form>
+
+{%endblock%}

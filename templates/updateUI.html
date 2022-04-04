@@ -1,0 +1,37 @@
+{%extends 'template.html'%}
+
+{%block body%}
+<!--Update UI -->
+ <form action="updateUser" method="post" style="width:700px; margin:3% auto; border:1px solid black;padding:10px;">
+
+        <div class="input-group input-group-sm mb-3" style="display:none;">
+           <span class="input-group-text" >ID:</span>
+           <input type="text" class="form-control" readonly value="{{data[0]}}" name="ID" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+        </div>
+
+        <div class="input-group input-group-sm mb-3">
+           <span class="input-group-text" >First Name:</span>
+           <input type="text" class="form-control" value="{{data[1]}}" name="first_name" required aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+         </div>
+
+        <div class="input-group input-group-sm mb-3">
+           <span class="input-group-text">Last Name:</span>
+           <input type="text" class="form-control" value="{{data[2]}}" name="last_name" required aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+         </div>
+
+
+         <div class="input-group input-group-sm mb-3">
+           <span class="input-group-text">Mobile No:</span>
+           <input type="number" class="form-control" value="{{data[3]}}" name="mobile_no" required maxlength="12" minlength="10" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+         </div>
+
+          <div class="input-group input-group-sm mb-3">
+           <span class="input-group-text">Address:</span>
+           <input type="text" class="form-control" value="{{data[4]}}" name="address" required aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+         </div>
+        <input type="submit" value="update">
+    </form>
+
+
+
+{%endblock%}

@@ -1,0 +1,36 @@
+{%extends 'template.html'%}
+
+{%block body%}
+
+<!--show all the data in table-->
+
+        <h1 align="center">list of users</h1>
+        <table class="table table-striped table-hover">
+            <tr>
+                <th>ID</th>
+                <th>first_nanme</th>
+                <th>last_name</th>
+                <th>mobile_no</th>
+                <th>Address</th>
+                <th>created</th>
+                <th>updated</th>
+                <th>update</th>
+                <th>delete</th>
+            </tr>
+            {% for i in range(length)%}
+            <tr>
+                <td>{{i+1}}</td>
+                <td>{{data[i]["firstName"]}}</td>
+                <td>{{data[i]["lastName"]}}</td>
+                <td>{{data[i]["mobileNo"]}}</td>
+                <td>{{data[i]["address"]}}</td>
+                <td>{{data[i]["created"]}}</td>
+                <td>{{data[i]["updated"]}}</td>
+                <td name={{i}}><a href="update?id={{data[i]['Id']}}">edit</a>
+                <td name={{i}}><a href="delete?id={{data[i]['Id']}}">delete</a>
+
+            </tr>
+            {% endfor %}
+        </table>
+
+{%endblock%}

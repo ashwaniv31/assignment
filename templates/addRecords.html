@@ -1,0 +1,34 @@
+{% extends 'template.html'%}
+
+
+
+{%block body%}
+
+<!--Create User UI-->
+
+<h1 style="text-align:center">Create a new user</h1>
+     <form action="addUser" method="post" name="myform"  style="width:700px; margin:3% auto; border:1px solid black;padding:10px;">
+        <div class="input-group input-group-sm mb-3">
+           <span class="input-group-text" >First Name:</span>
+           <input type="text" class="form-control" name="first_name" required aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+         </div>
+
+        <div class="input-group input-group-sm mb-3">
+           <span class="input-group-text">Last Name:</span>
+           <input type="text" class="form-control" name="last_name" required aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+         </div>
+
+
+         <div class="input-group input-group-sm mb-3">
+           <span class="input-group-text">Mobile No:</span>
+           <input type="text" class="form-control" name="mobile_no"  required maxlength="12" minlength="10" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+         </div>
+
+          <div class="input-group input-group-sm mb-3">
+           <span class="input-group-text">Address:</span>
+           <input type="text" class="form-control" name="address" required aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm">
+         </div>
+        <input type="submit" value="Add user">
+    </form>
+
+{% endblock%}
